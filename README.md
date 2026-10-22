@@ -2,7 +2,7 @@
 
 Shift scheduling for event volunteers: roles, shifts, conflict detection, and check-in.
 
-> Status: in development (Week 1: project setup)
+> Status: in development (Week 1: server setup)
 
 ## The problem
 Event organizers assign volunteers through group chats and spreadsheets. People get double-booked, no-shows leave gaps, and nobody can see at a glance which shifts are understaffed.
@@ -20,10 +20,46 @@ Event organizers assign volunteers through group chats and spreadsheets. People 
 ## Project structure
 - `client/`: React frontend
 - `server/`: Express API
-- `docs/`: architecture notes, database diagram, devlog
+- `docs/`: API collection, architecture notes, devlog
+
+## Prerequisites
+- Node.js (LTS)
+- Git
+- A free [Supabase](https://supabase.com) project (needed from the database step onward)
 
 ## Running locally
-Setup instructions will be added as the project takes shape.
+
+### 1. Clone and install
+```bash
+git clone https://github.com/kinramirez/volunteer-scheduler.git
+cd volunteer-scheduler/server
+npm install
+```
+
+### 2. Environment variables
+```bash
+cp .env.example .env
+```
+
+| Variable | Description |
+|---|---|
+| `PORT` | Port the API listens on (default `3000`) |
+
+Never commit your `.env` file.
+
+### 3. Start the server
+```bash
+npm run dev
+```
+
+### 4. Verify it works
+`GET http://localhost:3000/health` should return:
+```json
+{ "status": "ok" }
+```
+
+## API
+The request collection for [Bruno](https://www.usebruno.com) is in `docs/api/`. Open that folder as a collection and use the local environment.
 
 ## License
 Released under the [MIT License](LICENSE).
