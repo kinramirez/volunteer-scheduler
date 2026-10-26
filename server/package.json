@@ -6,18 +6,23 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "db:check": "tsx src/db-check.ts",
+    "postinstall": "prisma skills sync || exit 0"
   },
   "keywords": [],
   "author": "Kin James M. Ramirez",
   "license": "MIT",
   "dependencies": {
+    "@prisma/adapter-pg": "^7.10.1",
+    "@prisma/client": "^7.10.1",
     "dotenv": "^18.0.8",
     "express": "^5.3.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.5",
+    "prisma": "^7.10.1",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   }
