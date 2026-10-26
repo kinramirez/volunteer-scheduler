@@ -59,7 +59,7 @@ npm run dev
 ```
 
 ## API
-The request collection for [Bruno](https://www.usebruno.com) is in `docs/api/`. Open that folder as a collection and use the local environment.
+The request collection for [Bruno](https://www.usebruno.com) is in `docs/volunteer-scheduler-api/`. Open that folder as a collection and select the `local` environment.
 
 ## License
-Released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE).z
